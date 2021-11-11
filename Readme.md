@@ -1,10 +1,8 @@
 ﻿При написании данного проекта были использованы следующие технологии
 
-Dotnet 5.0.403
-EntityFrameworkCore 5.0.12
+Dotnet 5.0.403, EntityFrameworkCore 5.0.12
 
 Для запуска проекта необходимо скачать содержимое репозитория в отдельную папку, после чего с помощью cmd ввести команды
-dotnet build
-dotnet run
+dotnet build && dotnet run
 
 Сайт будет открыт на http://localhost:5000/
