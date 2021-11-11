@@ -1,0 +1,5 @@
+Visual Studio 2019 version 16.11.6
+
+appnetcore 5.0.403
+
+entityframeworkcore.SQLServer 5.0.12

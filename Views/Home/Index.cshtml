@@ -1,0 +1,78 @@
+﻿@model Order
+
+@{
+    ViewData["Title"] = "Создание нового заказа";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <br />
+    @{ if (!String.IsNullOrEmpty(ViewBag.error))
+        {
+            <span class=" bg-danger">@ViewBag.error</span>
+        }
+    }
+    <form asp-antiforgery="true" asp-action="Index" asp-controller="Home">
+        <div class="d-flex flex-wrap">
+            <div class="w-auto mr-3">
+                <div class="form-group">
+                    <label asp-for="sender_city">Город отправителя</label>
+                    <input type="text" asp-for="sender_city" class="form-control ">
+                    <span asp-validation-for="sender_city"></span>
+                </div>
+            </div>
+            <div class="w-auto mr-3">
+                <div class="form-group">
+                    <label asp-for="sender_address">Адрес отправителя</label>
+                    <input type="text" asp-for="sender_address" class="form-control ">
+                    <span asp-validation-for="sender_address"></span>
+                </div>
+            </div>
+            <div class="w-auto mr-3">
+                <div class="form-group">
+                    <label asp-for="receiver_city">Город получателя</label>
+                    <input type="text" asp-for="receiver_city" class="form-control ">
+                    <span asp-validation-for="receiver_city"></span>
+                </div>
+            </div>
+            <div class="w-auto mr-3">
+                <div class="form-group">
+                    <label asp-for="receiver_address">Адрес получателя</label>
+                    <input type="text" asp-for="receiver_address" class="form-control ">
+                    <span asp-validation-for="receiver_address"></span>
+                </div>
+            </div>
+            <div class="w-auto mr-3">
+                <div class="form-group">
+                    <label asp-for="package_weight">Вес груза</label>
+                    <input type="number" asp-for="package_weight" value="0" class="form-control">
+                    <span asp-validation-for="package_weight"></span>
+                </div>
+            </div>
+            <div class="w-auto mr-3">
+                <div class="form-group">
+                    <label asp-for="package_pickupDate">Дата забора груза</label>
+                    <input type="date" asp-for="package_pickupDate" class="form-control ">
+                    <span asp-validation-for="package_pickupDate"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <button type="submit" id="btn_save" class="btn btn-success font-weight-normal m-1 justify-content-center ">
+                Сохранить
+            </button>
+            <button type="button" id="btn_clear" class="btn btn-secondary font-weight-normal m-1 justify-content-center">
+                Очистить поля
+            </button>
+        </div>
+    </form>
+</div>
+
+
+@section scripts{
+    <script src="~/js/Index/save.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "Просмотр заказов";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table table-bordered table-hover table-responsive-sm">
+    <thead>
+        <tr class="bg-lightgray font-size-16">
+            <td class="sortable">Номер заказа</td>
+            <td class="sortable">Город отправителя</td>
+            <td class="sortable">Адрес отправителя</td>
+            <td class="sortable">Город получателя</td>
+            <td class="sortable">Адрес получателя</td>
+            <td class="sortable">Вес груза</td>
+            <td class="sortable">Дата забора груза</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        @{
+            foreach (var order in Model.allOrders)
+            {
+                <tr>
+                    <td>@order.id</td>
+                    <td>@order.sender_city</td>
+                    <td>@order.sender_address</td>
+                    <td>@order.receiver_city</td>
+                    <td>@order.receiver_address</td>
+                    <td>@order.package_weight</td>
+                    <td>@order.package_pickupDate</td>
+                </tr>
+            }
+        }
+    </tbody>
+
+
+</table>
