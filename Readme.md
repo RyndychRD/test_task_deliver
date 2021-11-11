@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿При написании данного проекта были использованы следующие технологии
 
-namespace test_task_deliver_RyndychRD
-{
-    public class Readme
-    {
-    }
-}
+Dotnet 5.0.403
+EntityFrameworkCore 5.0.12
+
+Для запуска проекта необходимо скачать содержимое репозитория в отдельную папку, после чего с помощью cmd ввести команды
+dotnet build
+dotnet run
+
+Сайт будет открыт на http://localhost:5000/
