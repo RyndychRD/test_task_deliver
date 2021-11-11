@@ -17,7 +17,7 @@ namespace test_task_deliver_RyndychRD.Migrations
                     sender_address = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     receiver_city = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     receiver_address = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    package_weight = table.Column<float>(type: "real", nullable: false),
+                    package_weight = table.Column<int>(type: "int", nullable: false),
                     package_pickupDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>

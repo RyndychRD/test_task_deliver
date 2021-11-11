@@ -10,7 +10,7 @@ using test_task_deliver_RyndychRD;
 namespace test_task_deliver_RyndychRD.Migrations
 {
     [DbContext(typeof(AppDBContent))]
-    [Migration("20211111102500_Initial")]
+    [Migration("20211111112606_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,8 +31,8 @@ namespace test_task_deliver_RyndychRD.Migrations
                     b.Property<DateTime>("package_pickupDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<float>("package_weight")
-                        .HasColumnType("real");
+                    b.Property<int>("package_weight")
+                        .HasColumnType("int");
 
                     b.Property<string>("receiver_address")
                         .IsRequired()

@@ -25,7 +25,6 @@ namespace test_task_deliver_RyndychRD
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
 
@@ -35,7 +34,6 @@ namespace test_task_deliver_RyndychRD
             services.AddTransient<IOrder, RepositoryOrder>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -45,12 +43,13 @@ namespace test_task_deliver_RyndychRD
    
             app.UseStaticFiles();
 
-            using (var scope = app.ApplicationServices.CreateScope())
+            //Тестовое наполнение базы данных
+/*            using (var scope = app.ApplicationServices.CreateScope())
             {
                 AppDBContent appDBcontent = scope.ServiceProvider.GetRequiredService<AppDBContent>();
                 DBInitial.InitialFill(appDBcontent);
             }
-
+*/
 
             app.UseRouting();
 

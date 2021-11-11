@@ -5925,7 +5925,7 @@
         "D:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp5.0"
+        "net5.0"
       ],
       "sources": {
         "D:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},

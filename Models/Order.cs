@@ -24,7 +24,7 @@ namespace test_task_deliver_RyndychRD.Models
         
         [Required(ErrorMessage = "Не указан вес")]
         [Range(0, int.MaxValue, ErrorMessage = "Введите число больше чем {1}")]
-        public float package_weight { set; get; }
+        public int package_weight { set; get; }
         
         [Required(ErrorMessage = "Не указана дата забора груза")]
         public DateTime package_pickupDate { set; get; }
